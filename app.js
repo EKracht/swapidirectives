@@ -31,7 +31,7 @@ app.directive("swapiPlanets", function(){
   }
 })
 
-app.directive("swapiResident", function(){
+app.directive("swapiResidents", function(){
   return {
     restrict: 'E',
     templateUrl: (elem, attr) => `cardResidents.html`
