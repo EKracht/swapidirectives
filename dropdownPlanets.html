@@ -1,22 +1,23 @@
 <br>
 
-<div ng-hide="planets.length === 61">
-  <h3>Planets loading...please enjoy Yoda until finished.<h3>
-  <img src="https://media.giphy.com/media/pdT7vMMWgp7os/giphy.gif" alt="">
-</div>
+<div ng-show="!error">
+  <div ng-hide="planets.length === 61">
+    <h3>Planets loading...please enjoy Yoda until finished.<h3>
+    <img src="https://media.giphy.com/media/pdT7vMMWgp7os/giphy.gif" alt="">
+  </div>
 
-
-<div ng-show="planets.length === 61" class="container">
-  <div class="dropdown">
-    <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      Swapi Planets
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-      <li ng-show="planet.residents.length >= residentCount" ng-repeat="planet in planets track by $index"><a ng-click="getResidents($index)" href="#">{{planet.name}}</a></li>
-    </ul>
-    <br>
-    <h5>Minimum residents on planet:</h5>
-    <input ng-model="residentCount" type="number" placeholder="Minimum residents"></input>
+  <div ng-show="planets.length === 61" class="container">
+    <div class="dropdown">
+      <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Swapi Planets
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li ng-show="planet.residents.length >= residentCount" ng-repeat="planet in planets track by $index"><a ng-click="getResidents($index)" href="#">{{planet.name}}</a></li>
+      </ul>
+      <br>
+      <h5>Minimum residents on planet:</h5>
+      <input ng-model="residentCount" type="number" placeholder="Minimum residents"></input>
+    </div>
   </div>
 </div>

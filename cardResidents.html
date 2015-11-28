@@ -11,14 +11,16 @@
 
 <br>
 
-  <h2>Residents:</h2>
-  <div>  
-    <div ng-repeat="resident in residents"class="panel panel-success">
-      <div class="panel-heading">{{resident.name}}</div>
-      <div class="panel-body">Height: {{resident.height}}</div>
-      <div class="panel-body">Mass: {{resident.mass}}</div>
-      <div class="panel-body">Hair Color: {{resident.hair_color}}</div>
-      <div class="panel-body">Skin Color: {{resident.skin_color}}</div>
+  <div ng-show="!error">
+    <h2>Residents:</h2>
+    <div>  
+      <div ng-repeat="resident in residents"class="panel panel-success">
+        <div class="panel-heading">{{resident.name}}</div>
+        <div class="panel-body">Height: {{resident.height}}</div>
+        <div class="panel-body">Mass: {{resident.mass}}</div>
+        <div class="panel-body">Hair Color: {{resident.hair_color}}</div>
+        <div class="panel-body">Skin Color: {{resident.skin_color}}</div>
+      </div>
     </div>
   </div>
 </div>

@@ -16,7 +16,9 @@ app.controller('mainCtrl', function($scope, $http, savePlanetsSvc){
         $scope.planet = $scope.planets[index];
         $scope.residents = arrResidents;
       })
-      .catch(error => error("an error image"));
+      .catch(error => {
+        $rootScope.error = true;
+      })
     }
   }; 
   $scope.residentCount = 0;
@@ -36,7 +38,7 @@ app.directive("swapiResident", function(){
   }
 })
 
-app.service("savePlanetsSvc", function($http){
+app.service("savePlanetsSvc", function($rootScope, $http){
   var planets = [];
   this.getPlanets = function(cb){
     for (var i = 1; i <= 7; i++) {
@@ -45,7 +47,9 @@ app.service("savePlanetsSvc", function($http){
          planets = planets.concat(resp.data.results);
          cb(planets);
       })
-      .catch(error => error("an error image"));
+      .catch(error => {
+        $rootScope.error = true;
+      })    
     }
   };
 })
