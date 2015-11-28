@@ -4,7 +4,7 @@ This app will allow you to find all Star Wars planets in a dropdown and filter t
 
 When the planet is clicked, you will get information about the planet and all of its residents.
 
-I have used 2 custom directives, called swapi-planets and swapi-residents.
+I have used 2 custom directives called swapi-planets and swapi-residents.
 
 Thank you.
 
