@@ -17,7 +17,7 @@ app.controller('mainCtrl', function($scope, $http, savePlanetsSvc){
         $scope.planet = $scope.planets[index];
         $scope.residents = arrResidents;
       })
-      .catch(error => console.error(error.status));
+      .catch(error => error("an error image"));
     }
   }; 
   $scope.residentCount = 0;
@@ -25,17 +25,15 @@ app.controller('mainCtrl', function($scope, $http, savePlanetsSvc){
 
 app.directive("swapiPlanets", function(){
   return {
-    templateUrl: (elem, attr) => `dropdownPlanets.html`,
-    controller: function ($scope, $http, savePlanetsSvc){
-    }
+    restrict: 'E',
+    templateUrl: (elem, attr) => `dropdownPlanets.html`
   }
 })
 
 app.directive("swapiResident", function(){
   return {
-    templateUrl: (elem, attr) => `cardResidents.html`,
-    controller: function ($scope, $http, savePlanetsSvc){
-    }
+    restrict: 'E',
+    templateUrl: (elem, attr) => `cardResidents.html`
   }
 })
 
@@ -48,7 +46,7 @@ app.service("savePlanetsSvc", function($http){
          planets = planets.concat(resp.data.results);
          cb(planets);
       })
-      .catch(error => console.error(error.status));
+      .catch(error => error("an error image"));
     }
   };
 })
