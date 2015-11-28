@@ -6,7 +6,7 @@ When the planet is clicked, you will get information about the planet and all of
 
 I have used 2 custom directives called swapi-planets and swapi-residents.
 
-Thank you.
+Thank you!
 
 gh-pages link:
 
