@@ -1,0 +1,22 @@
+<br>
+
+<div ng-hide="planets.length === 61">
+  <h3>Planets loading...please enjoy kitty until finished.<h3>
+  <img src="https://49.media.tumblr.com/4aadbd219f9b649cde4707078fd82536/tumblr_n4xbjxwIrU1sqa80io1_500.gif" alt="">
+</div>
+
+
+<div ng-show="planets.length === 61" class="container">
+  <div class="dropdown">
+    <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      Swapi Planets
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+      <li ng-show="planet.residents.length >= residentCount" ng-repeat="planet in planets track by $index"><a ng-click="getResidents($index)" href="#">{{planet.name}}</a></li>
+    </ul>
+    <br>
+    <h5>Minimum residents on planet:</h5>
+    <input ng-model="residentCount" type="number" placeholder="Minimum residents"></input>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+img {
+  height: 80%;
+  width: 80%;
+}
+
+body {
+  text-align: center;
+}
+
+.dropdown-menu {
+  left: 50%;
+  right: auto;
+  text-align: center;
+}
+
+#planetHeader {
+  border: 5px solid black;
+  padding-bottom: 15px;
+}

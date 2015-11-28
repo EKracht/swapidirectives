@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="swapi">
+<head>
+  <meta charset="UTF-8">
+  <title>Swapi Planets & Residents</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>SWAPI AngularJS and Custom Directives</h1>
+
+  <div ng-controller="mainCtrl">
+    <swapi-planets min-residents="3"></swapi-planets>  
+
+    <swapi-resident></swapi-resident> 
+  </div>
+
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
