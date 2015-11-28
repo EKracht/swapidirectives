@@ -10,7 +10,6 @@ app.controller('mainCtrl', function($scope, $http, savePlanetsSvc){
     var arrResidents = [];
     var arrResidentsLinks = $scope.planets[index].residents;
     for (var i = 0; i < arrResidentsLinks.length; i++) {
-      console.log(arrResidentsLinks[i] + '?format=json');
       $http.get(arrResidentsLinks[i] + '?format=json')
       .then(resp => {
         arrResidents.push(resp.data);
